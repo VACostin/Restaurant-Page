@@ -4,7 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
+    main: './src/index.js',
+    home: './src/home/home.js',
+    menu: './src/menu/menu.js',
+    contact: './src/contact/contact.js'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -13,7 +16,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Restaurant Page',
-      template: 'index.html'
+      template: 'index.html',
     }),
   ],
   output: {
